@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    {% include 'imports/head.html' %}
+
+</head>
+
+<body class="loading" data-layout-color="light" data-leftbar-theme="dark" data-layout-mode="fluid"
+    data-rightbar-onstart="true">
+    <!-- Begin page -->
+    <div class="wrapper">
+        <!-- ========== Left Sidebar Start ========== -->
+
+
+        {% include 'imports/sidebar.html' %}
+
+
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+                <!-- Topbar Start -->
+                {% include 'imports/topbar.html' %}
+                <!-- end Topbar -->
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+
+
+                {% include 'pages/board/acl.html' %}
+
+
+
+                </div>
+                <!-- container -->
+
+            </div>
+            <!-- content -->
+
+            <!-- Footer Start -->
+            {% include 'imports/footer.html' %}
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Right Sidebar -->
+    {% comment %} {% include 'imports/config-sidebar.html' %} {% endcomment %}
+
+    <div class="rightbar-overlay"></div>
+    <!-- /End-bar -->
+
+    {% include 'imports/imports.html' %}
+</body>
+
+
+<!-- Mirrored from coderthemes.com/hyper/saas/dashboard-analytics.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Jul 2022 10:20:35 GMT -->
+
+</html>

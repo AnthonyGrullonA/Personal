@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    {% include 'imports/head.html' %}
+
+</head>
+
+<body class="loading" data-layout-color="light" data-leftbar-theme="dark" data-layout-mode="fluid"
+    data-rightbar-onstart="true">
+    <div class="wrapper">
+        {% include 'imports/sidebar.html' %}
+
+        <div class="content-page">
+            <div class="content">
+                <!-- Topbar Start -->
+                {% include 'imports/topbar.html' %}
+                <!-- end Topbar -->
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title">{{ Titulo_Form }}</h4>
+                                    <br>
+                                    <div class="tab-content">
+                                        <div class="tab-pane show active" id="input-types-preview">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <form method="post">
+                                                        {% csrf_token %}
+                                                        {{ form.as_p }}
+                                                        <div class="text-center">
+                                                            <button class="btn btn-success mt-3" type="submit">Guardar</button>
+    
+                                                        </div>
+                                                    </form>
+                                                    
+                                                </div> <!-- end col -->
+
+                                            </div>
+                                            <!-- end row-->                      
+                                        </div> <!-- end preview-->
+                                    
+                                    </div> <!-- end tab-content-->
+                                </div> <!-- end card-body -->
+                            </div> <!-- end card -->
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+
+
+
+                </div>
+            </div>
+
+            <!-- Footer Start -->
+            {% include 'imports/footer.html' %}
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Right Sidebar -->
+    {% comment %} {% include 'imports/config-sidebar.html' %} {% endcomment %}
+
+    <div class="rightbar-overlay"></div>
+    <!-- /End-bar -->
+
+    {% include 'imports/imports.html' %}
+</body>
+
+
+<!-- Mirrored from coderthemes.com/hyper/saas/dashboard-analytics.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 29 Jul 2022 10:20:35 GMT -->
+
+</html>
